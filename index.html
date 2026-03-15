@@ -4,50 +4,49 @@
 <head>
 <meta charset="UTF-8">
 <title>Jeu 421</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <h1>Jeu 421</h1>
 
-<div id="menu">
+<div id="setup">
 
-<h2>Nouvelle partie</h2>
+Nombre joueurs humains
+<input id="humanCount" type="number" value="1" min="0" max="6">
 
-<label>Nombre de joueurs humains</label>
-<input type="number" id="humanPlayers" min="1" max="6" value="1">
+Nombre IA
+<input id="aiCount" type="number" value="1" min="0" max="6">
 
-<label>Nombre de joueurs IA</label>
-<input type="number" id="aiPlayers" min="0" max="6" value="1">
-
-<button onclick="createGame()">Créer partie</button>
-
-<div id="playersConfig"></div>
+<button onclick="startGame()">Créer partie</button>
 
 </div>
 
-<div id="gameArea" style="display:none">
+<div id="game" style="display:none">
 
-<h2>Table de jeu</h2>
+<h2 id="phase"></h2>
+<h2 id="turn"></h2>
 
-<div id="playersBoard"></div>
+<div id="dice">
+<span id="d1">🎲</span>
+<span id="d2">🎲</span>
+<span id="d3">🎲</span>
+</div>
 
-<button onclick="rollDice()">Lancer les dés</button>
-<button onclick="endTurn()">Fin du tour</button>
+<button id="rollBtn" onclick="rollDice()">Lancer</button>
+
+<h3 id="combo"></h3>
+
+<h3>Scores</h3>
+<div id="scores"></div>
+
+<h3>Historique</h3>
+<div id="log"></div>
 
 </div>
 
-<h2>Statistiques</h2>
-
-<div id="stats"></div>
-
-<script src="script.js"></script>
-<script src="js/game.js"></script>
-<script src="js/ai.js"></script>
-<script src="js/stats.js"></script>
+<script src="game.js"></script>
 
 </body>
 </html>
