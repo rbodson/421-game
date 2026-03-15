@@ -1,42 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
 <title>Jeu 421</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
 <h1>Jeu 421</h1>
 
 <div id="setup">
-
 Joueurs humains
 <input id="humanCount" type="number" value="1" min="0" max="6">
-
 IA
 <input id="aiCount" type="number" value="1" min="0" max="6">
-
 <button onclick="startGame()">Créer partie</button>
-
 </div>
 
 <div id="game" style="display:none">
-
 <h2 id="phase"></h2>
 <h2 id="turn"></h2>
 
 <div id="dice">
-
 <span id="d1">🎲</span>
 <span id="d2">🎲</span>
 <span id="d3">🎲</span>
-
 </div>
 
 <button onclick="rollDice()">Lancer</button>
@@ -48,7 +37,6 @@ IA
 
 <h3>Historique</h3>
 <div id="log"></div>
-
 </div>
 
 <script src="js/dice.js"></script>
