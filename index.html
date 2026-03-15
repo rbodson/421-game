@@ -2,9 +2,12 @@
 <html lang="fr">
 
 <head>
+
 <meta charset="UTF-8">
 <title>Jeu 421</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -13,10 +16,10 @@
 
 <div id="setup">
 
-Nombre joueurs humains
+Joueurs humains
 <input id="humanCount" type="number" value="1" min="0" max="6">
 
-Nombre IA
+IA
 <input id="aiCount" type="number" value="1" min="0" max="6">
 
 <button onclick="startGame()">Créer partie</button>
@@ -29,12 +32,14 @@ Nombre IA
 <h2 id="turn"></h2>
 
 <div id="dice">
+
 <span id="d1">🎲</span>
 <span id="d2">🎲</span>
 <span id="d3">🎲</span>
+
 </div>
 
-<button id="rollBtn" onclick="rollDice()">Lancer</button>
+<button onclick="rollDice()">Lancer</button>
 
 <h3 id="combo"></h3>
 
@@ -46,7 +51,11 @@ Nombre IA
 
 </div>
 
-<script src="game.js"></script>
+<script src="js/dice.js"></script>
+<script src="js/rules.js"></script>
+<script src="js/players.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
